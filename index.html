@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Event Booking - Secondary Marketplace</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background-color: #20232a;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+    nav {
+      text-align: center;
+      background-color: #282c34;
+      padding: 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #61dafb;
+    }
+    .hero {
+      background-color: #e2e2e2;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .hero h2 {
+      margin-bottom: 10px;
+    }
+    .hero button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .hero button:hover {
+      background-color: #0056b3;
+    }
+    .section {
+      padding: 40px 20px;
+    }
+    .section h3 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #20232a;
+    }
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .card {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      width: 300px;
+    }
+    .card h4 {
+      margin-top: 0;
+      color: #007bff;
+    }
+    .gallery {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 20px 0;
+    }
+    .gallery img {
+      width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    /* Contact Form */
+    .contact-form {
+      max-width: 600px;
+      background-color: white;
+      padding: 30px;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .contact-form label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      resize: vertical;
+      font-size: 1rem;
+    }
+    .contact-form button {
+      background-color: #28a745;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .contact-form button:hover {
+      background-color: #218838;
+    }
+    #home p {
+      padding: 0rem 2rem;
+    }
+
+    footer {
+      background-color: #20232a;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+      font-size: 0.9rem;
+    }
+
+    @media(max-width: 768px) {
+      .card, .gallery img {
+        width: 90%;
+      }
+    }
+
+    .call-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      justify-content: center;
+      align-items: center;
+      margin: 30px 0;
+    }
+    .call-buttons a button {
+      padding: 12px 25px;
+      font-size: 1rem;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .call-buttons a button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <header id="home">
+    <h1>Book My Ticket!</h1>
+    <p>We are a secondary marketplace — not a box office or venue.</p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#events">Upcoming Events</a>
+    <a href="#contact">Contact</a>
+    <a href="#privacy">Privacy Policy</a>
+    <a href="#terms">Terms</a>
+  </nav>
+
+  <div class="hero">
+    <h2>Your Gateway to Live Events</h2>
+    <p>Get tickets to your favorite concerts, sports, and theater shows. Safe, secure & easy!</p>
+  </div>
+
+  <!-- Book Now Button BEFORE Upcoming Events -->
+  <div class="call-buttons">
+    <a href="tel:+1-844-376-1015">
+      <button>Book Now</button>
+    </a>
+  </div>
+
+  <div class="section" id="events">
+    <h3>Upcoming Events</h3>
+    <div class="cards">
+      <div class="card">
+        <h4>🎵 Concert</h4>
+        <p>Joe Russo's Nearly Dead – Saint Louis, MO</p>
+        <p>Elton John – Madison Square Garden, NY</p>
+        <p>Billie Eilish – Wells Fargo Center, PA</p>
+      </div>
+      <div class="card">
+        <h4>🏀 Sports</h4>
+        <p>Brooklyn Legends Classic – Barclays Center, NY</p>
+        <p>Patriots vs Giants – MetLife Stadium, NJ</p>
+        <p>NY Yankees vs Orioles – Yankee Stadium, NY</p>
+      </div>
+      <div class="card">
+        <h4>🎭 Theater</h4>
+        <p>SIX (Musical) – Brooks Atkinson Theatre, NY</p>
+        <p>Frozen – Orpheum Theatre, Minneapolis</p>
+        <p>Beautiful Woman – Marcus Center, WI</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Call Now Buttons AFTER Events -->
+  <div class="call-buttons">
+    <a href="tel:+1-844-376-1015">
+      <button>📞 Call Now</button>
+    </a>
+    <a href="tel:+1-844-376-1015">
+      <button>+1-844-376-1015</button>
+    </a>
+  </div>
+
+  <div class="section">
+    <h3>Featured Moments</h3>
+    <div class="gallery">
+      <img src="https://cdn.pixabay.com/photo/2017/03/27/15/13/man-2179313_1280.jpg" alt="Concert">
+      <img src="https://cdn.pixabay.com/photo/2014/10/14/20/24/soccer-488700_1280.jpg" alt="Sports Event">
+      <img src="https://cdn.pixabay.com/photo/2015/12/09/17/12/new-years-eve-1085072_1280.jpg" alt="Theater Show">
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>Why Choose Us?</h3>
+    <p style="max-width: 800px; margin: auto; text-align: center;">
+      You are the heartbeat of our business! We're redefining the ticketing experience — connecting fans, artists, and venues effortlessly.
+      Whether it’s a concert, sports match, or a theater performance, our platform ensures a secure, smooth, and satisfying booking experience.
+    </p>
+  </div>
+
+  <div class="section" id="contact">
+    <h3>Contact Us</h3>
+    <form class="contact-form">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Your Name" required />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <div class="section" id="privacy">
+    <h3>Privacy Policy</h3>
+    <div style="max-width: 800px; margin: auto;">
+      <p>We value your privacy. Book My Ticket collects only the necessary information to provide you with a seamless experience. We do not sell, trade, or share your personal information with any third-party advertisers.</p>
+      <p>Your data is securely stored and encrypted to ensure full protection. By using our platform, you agree to our data practices as described here.</p>
+    </div>
+  </div>
+
+  <div class="section" id="terms">
+    <h3>Terms & Conditions</h3>
+    <div style="max-width: 800px; margin: auto;">
+      <p>Book My Ticket operates as a secondary marketplace and is not affiliated with any box office or venue. Ticket prices may be above or below the face value depending on demand and availability.</p>
+      <p>All ticket sales are final. No refunds or exchanges are permitted unless the event is officially canceled. By using our service, you agree to these terms.</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Book My Ticket. All rights reserved.</p>
+    <p>Call Us: +1-844-376-1015</p>
+  </footer>
+
+</body>
+</html>
